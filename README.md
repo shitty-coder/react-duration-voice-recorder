@@ -1,30 +1,67 @@
 # react-duration-voice-recorder
 
-> A react voice recorder component that records audio within a specified duration and generates audio file and url
+This is a voice recorder with time duration.
 
-[![NPM](https://img.shields.io/npm/v/react-duration-voice-recorder.svg)](https://www.npmjs.com/package/react-duration-voice-recorder) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+## Installation
 
-## Install
+To install via [npm](https://www.npmjs.com/).
 
 ```bash
-npm install --save react-duration-voice-recorder
+npm install react-duration-voice-recorder
 ```
 
 ## Usage
 
-```jsx
-import React, { Component } from 'react'
+```javascript
+import ReactDurationRecorder from 'react-duration-voice-recorder'
 
-import MyComponent from 'react-duration-voice-recorder'
-import 'react-duration-voice-recorder/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const MyComponent = () => {
+  return (
+    <ReactDurationRecorder
+      getFile={(file) => console.log(file)}
+      getUrl={(url) => console.log(url)}
+      showPreview={true}
+      timer={true}
+      btnClass='your button classname'
+      containerStyle={{
+        width: '300px',
+        border: '1px solid black',
+        padding: '10px'
+      }}
+      duration={{
+        hours: 0,
+        minutes: 0,
+        seconds: 30
+      }}
+    />
+  )
 }
 ```
 
+## Dependencies
+
+- React
+- react-media-recorder
+- react-icons
+
+## Props
+
+- **getFile** : (REQUIRED) requires function that accepts file on clicking upload button
+- **getUrl** : (REQUIRED) requires a function that accepts the blog url
+- **showPreview**: (OPTIONAL)(boolean) shows audio element for preview. default will be true
+- **timer**: (OPTIONAL)(boolean) shows timer while recording. default will be true
+- **btnClass**: (OPTIONAL)(string) No default styles provided. Add classNames here
+- **containerStyle**: (OPTIONAL)(object). Outer container. Accepts styleObject.
+- **duration**: (OPTIONAL) (object). requires objects with keys hours(int),minutes(int),seconds(int). default will be 30 seconds
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
 ## License
 
-MIT © [shitty-coder](https://github.com/shitty-coder)
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## 💰 You can help me by Donating
+
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/shittycoder)

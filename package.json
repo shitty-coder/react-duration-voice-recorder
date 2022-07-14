@@ -4,13 +4,22 @@
   "description": "A react voice recorder component that records audio within a specified duration and generates audio file and url",
   "author": "shitty-coder",
   "license": "MIT",
-  "repository": "shitty-coder/react-duration-voice-recorder",
+  "repository": "https://github.com/shitty-coder/react-duration-voice-recorder",
+  "homepage": "https://github.com/shitty-coder/react-duration-voice-recorder",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
   "engines": {
     "node": ">=10"
   },
+  "keywords": [
+    "react",
+    "react-voice-recorder",
+    "react-duration-recorder",
+    "react-duration-voice-recoder",
+    "react-media-recorder",
+    "react-voice-recorder-component"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
@@ -27,7 +36,6 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
-    "microbundle-crl": "^0.13.10",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
@@ -41,6 +49,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-standard": "^4.0.1",
     "gh-pages": "^2.2.0",
+    "microbundle-crl": "^0.13.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
     "react": "^16.13.1",
@@ -49,5 +58,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "react-icons": "^4.4.0",
+    "react-media-recorder": "^1.6.6"
+  }
 }
